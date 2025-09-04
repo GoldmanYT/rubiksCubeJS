@@ -1,69 +1,69 @@
 <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-<!-- front -->
-<path d="M 250 197.93 L 250 255.66 L 300 284.53 L 300 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 250 255.66 L 250 313.4 L 300 342.26 L 300 284.53 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 250 313.4 L 250 371.13 L 300 400.0 L 300 342.26 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 226.79 L 300 284.53 L 350 313.4 L 350 255.66 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 284.53 L 300 342.26 L 350 371.13 L 350 313.4 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 342.26 L 300 400.0 L 350 428.87 L 350 371.13 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 255.66 L 350 313.4 L 400 342.26 L 400 284.53 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 313.4 L 350 371.13 L 400 400.0 L 400 342.26 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 371.13 L 350 428.87 L 400 457.74 L 400 400.0 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- up -->
+  <path d="M 400 111.32 L 450 140.19 L 400 169.06 L 350 140.19 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="0" y="0"/>
+  <path d="M 450 140.19 L 500 169.06 L 450 197.93 L 400 169.06 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="1" y="0"/>
+  <path d="M 500 169.06 L 550 197.93 L 500 226.79 L 450 197.93 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="2" y="0"/>
+  <path d="M 350 140.19 L 400 169.06 L 350 197.93 L 300 169.06 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="0" y="1"/>
+  <path d="M 400 169.06 L 450 197.93 L 400 226.79 L 350 197.93 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="1" y="1"/>
+  <path d="M 450 197.93 L 500 226.79 L 450 255.66 L 400 226.79 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="2" y="1"/>
+  <path d="M 300 169.06 L 350 197.93 L 300 226.79 L 250 197.93 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="0" y="2"/>
+  <path d="M 350 197.93 L 400 226.79 L 350 255.66 L 300 226.79 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="1" y="2"/>
+  <path d="M 400 226.79 L 450 255.66 L 400 284.53 L 350 255.66 Z" fill="white" stroke="black" stroke-width="4" class="tile" side="0" x="2" y="2"/>
 
-<!-- right -->
-<path d="M 400 284.53 L 400 342.26 L 450 313.4 L 450 255.66 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 342.26 L 400 400.0 L 450 371.13 L 450 313.4 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 400.0 L 400 457.74 L 450 428.87 L 450 371.13 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 450 255.66 L 450 313.4 L 500 284.53 L 500 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 450 313.4 L 450 371.13 L 500 342.26 L 500 284.53 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 450 371.13 L 450 428.87 L 500 400.0 L 500 342.26 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 500 226.79 L 500 284.53 L 550 255.66 L 550 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 500 284.53 L 500 342.26 L 550 313.4 L 550 255.66 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 500 342.26 L 500 400.0 L 550 371.13 L 550 313.4 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- front -->
+  <path d="M 250 197.93 L 300 226.79 L 300 284.53 L 250 255.66 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="0" y="0"/>
+  <path d="M 300 226.79 L 350 255.66 L 350 313.4 L 300 284.53 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="1" y="0"/>
+  <path d="M 350 255.66 L 400 284.53 L 400 342.26 L 350 313.4 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="2" y="0"/>
+  <path d="M 250 255.66 L 300 284.53 L 300 342.26 L 250 313.4 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="0" y="1"/>
+  <path d="M 300 284.53 L 350 313.4 L 350 371.13 L 300 342.26 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="1" y="1"/>
+  <path d="M 350 313.4 L 400 342.26 L 400 400.0 L 350 371.13 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="2" y="1"/>
+  <path d="M 250 313.4 L 300 342.26 L 300 400.0 L 250 371.13 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="0" y="2"/>
+  <path d="M 300 342.26 L 350 371.13 L 350 428.87 L 300 400.0 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="1" y="2"/>
+  <path d="M 350 371.13 L 400 400.0 L 400 457.74 L 350 428.87 Z" fill="green" stroke="black" stroke-width="4" class="tile" side="1" x="2" y="2"/>
 
-<!-- up -->
-<path d="M 250 197.93 L 300 226.79 L 350 197.93 L 300 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 226.79 L 350 255.66 L 400 226.79 L 350 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 255.66 L 400 284.53 L 450 255.66 L 400 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 169.06 L 350 197.93 L 400 169.06 L 350 140.19 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 197.93 L 400 226.79 L 450 197.93 L 400 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 226.79 L 450 255.66 L 500 226.79 L 450 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 140.19 L 400 169.06 L 450 140.19 L 400 111.32 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 169.06 L 450 197.93 L 500 169.06 L 450 140.19 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 450 197.93 L 500 226.79 L 550 197.93 L 500 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- right -->
+  <path d="M 400 284.53 L 450 255.66 L 450 313.4 L 400 342.26 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="0" y="0"/>
+  <path d="M 450 255.66 L 500 226.79 L 500 284.53 L 450 313.4 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="1" y="0"/>
+  <path d="M 500 226.79 L 550 197.93 L 550 255.66 L 500 284.53 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="2" y="0"/>
+  <path d="M 400 342.26 L 450 313.4 L 450 371.13 L 400 400.0 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="0" y="1"/>
+  <path d="M 450 313.4 L 500 284.53 L 500 342.26 L 450 371.13 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="1" y="1"/>
+  <path d="M 500 284.53 L 550 255.66 L 550 313.4 L 500 342.26 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="2" y="1"/>
+  <path d="M 400 400.0 L 450 371.13 L 450 428.87 L 400 457.74 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="0" y="2"/>
+  <path d="M 450 371.13 L 500 342.26 L 500 400.0 L 450 428.87 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="1" y="2"/>
+  <path d="M 500 342.26 L 550 313.4 L 550 371.13 L 500 400.0 Z" fill="red" stroke="black" stroke-width="4" class="tile" side="2" x="2" y="2"/>
 
-<!-- back -->
-<path d="M 600 82.46 L 600 140.19 L 650 169.06 L 650 111.32 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 600 140.19 L 600 197.93 L 650 226.79 L 650 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 600 197.93 L 600 255.66 L 650 284.53 L 650 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 650 111.32 L 650 169.06 L 700 197.93 L 700 140.19 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 650 169.06 L 650 226.79 L 700 255.66 L 700 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 650 226.79 L 650 284.53 L 700 313.4 L 700 255.66 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 700 140.19 L 700 197.93 L 750 226.79 L 750 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 700 197.93 L 700 255.66 L 750 284.53 L 750 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 700 255.66 L 700 313.4 L 750 342.26 L 750 284.53 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- down -->
+  <path d="M 400 486.6 L 450 515.47 L 400 544.34 L 350 515.47 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="0" y="0"/>
+  <path d="M 450 515.47 L 500 544.34 L 450 573.21 L 400 544.34 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="1" y="0"/>
+  <path d="M 500 544.34 L 550 573.21 L 500 602.07 L 450 573.21 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="2" y="0"/>
+  <path d="M 350 515.47 L 400 544.34 L 350 573.21 L 300 544.34 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="0" y="1"/>
+  <path d="M 400 544.34 L 450 573.21 L 400 602.07 L 350 573.21 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="1" y="1"/>
+  <path d="M 450 573.21 L 500 602.07 L 450 630.94 L 400 602.07 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="2" y="1"/>
+  <path d="M 300 544.34 L 350 573.21 L 300 602.07 L 250 573.21 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="0" y="2"/>
+  <path d="M 350 573.21 L 400 602.07 L 350 630.94 L 300 602.07 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="1" y="2"/>
+  <path d="M 400 602.07 L 450 630.94 L 400 659.81 L 350 630.94 Z" fill="yellow" stroke="black" stroke-width="4" class="tile" side="3" x="2" y="2"/>
 
-<!-- left -->
-<path d="M 50 169.06 L 50 226.79 L 100 197.93 L 100 140.19 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 50 226.79 L 50 284.53 L 100 255.66 L 100 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 50 284.53 L 50 342.26 L 100 313.4 L 100 255.66 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 100 140.19 L 100 197.93 L 150 169.06 L 150 111.32 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 100 197.93 L 100 255.66 L 150 226.79 L 150 169.06 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 100 255.66 L 100 313.4 L 150 284.53 L 150 226.79 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 150 111.32 L 150 169.06 L 200 140.19 L 200 82.46 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 150 169.06 L 150 226.79 L 200 197.93 L 200 140.19 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 150 226.79 L 150 284.53 L 200 255.66 L 200 197.93 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- back -->
+  <path d="M 600 82.46 L 650 111.32 L 650 169.06 L 600 140.19 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="0" y="0"/>
+  <path d="M 650 111.32 L 700 140.19 L 700 197.93 L 650 169.06 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="1" y="0"/>
+  <path d="M 700 140.19 L 750 169.06 L 750 226.79 L 700 197.93 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="2" y="0"/>
+  <path d="M 600 140.19 L 650 169.06 L 650 226.79 L 600 197.93 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="0" y="1"/>
+  <path d="M 650 169.06 L 700 197.93 L 700 255.66 L 650 226.79 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="1" y="1"/>
+  <path d="M 700 197.93 L 750 226.79 L 750 284.53 L 700 255.66 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="2" y="1"/>
+  <path d="M 600 197.93 L 650 226.79 L 650 284.53 L 600 255.66 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="0" y="2"/>
+  <path d="M 650 226.79 L 700 255.66 L 700 313.4 L 650 284.53 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="1" y="2"/>
+  <path d="M 700 255.66 L 750 284.53 L 750 342.26 L 700 313.4 Z" fill="blue" stroke="black" stroke-width="4" class="tile" side="4" x="2" y="2"/>
 
-<!-- down -->
-<path d="M 250 573.21 L 300 602.07 L 350 573.21 L 300 544.34 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 602.07 L 350 630.94 L 400 602.07 L 350 573.21 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 630.94 L 400 659.81 L 450 630.94 L 400 602.07 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 300 544.34 L 350 573.21 L 400 544.34 L 350 515.47 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 573.21 L 400 602.07 L 450 573.21 L 400 544.34 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 602.07 L 450 630.94 L 500 602.07 L 450 573.21 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 350 515.47 L 400 544.34 L 450 515.47 L 400 486.6 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 400 544.34 L 450 573.21 L 500 544.34 L 450 515.47 Z" fill="white" stroke="black" stroke-width="4"/>
-<path d="M 450 573.21 L 500 602.07 L 550 573.21 L 500 544.34 Z" fill="white" stroke="black" stroke-width="4"/>
+  <!-- left -->
+  <path d="M 50 169.06 L 100 140.19 L 100 197.93 L 50 226.79 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="0" y="0"/>
+  <path d="M 100 140.19 L 150 111.32 L 150 169.06 L 100 197.93 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="1" y="0"/>
+  <path d="M 150 111.32 L 200 82.46 L 200 140.19 L 150 169.06 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="2" y="0"/>
+  <path d="M 50 226.79 L 100 197.93 L 100 255.66 L 50 284.53 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="0" y="1"/>
+  <path d="M 100 197.93 L 150 169.06 L 150 226.79 L 100 255.66 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="1" y="1"/>
+  <path d="M 150 169.06 L 200 140.19 L 200 197.93 L 150 226.79 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="2" y="1"/>
+  <path d="M 50 284.53 L 100 255.66 L 100 313.4 L 50 342.26 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="0" y="2"/>
+  <path d="M 100 255.66 L 150 226.79 L 150 284.53 L 100 313.4 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="1" y="2"/>
+  <path d="M 150 226.79 L 200 197.93 L 200 255.66 L 150 284.53 Z" fill="orange" stroke="black" stroke-width="4" class="tile" side="5" x="2" y="2"/>
 
 </svg>

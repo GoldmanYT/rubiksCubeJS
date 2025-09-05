@@ -5,10 +5,23 @@ import { RubiksCube } from "./cube.js";
 const rubiksCube = new RubiksCube();
 
 document.addEventListener("keydown", (event) => {
-  const move = event.code.at(-1);
-  if (event.code.slice(0, -1) === "Key" && Object.keys(rubiksCube.MOVES).indexOf(move) !== -1) {
+  if (event.code === "Backspace") {
+    rubiksCube.scramble();
+  }
+
+  let move = event.code.at(-1);
+  if (rubiksCube.ROTATIONS_UPPER.indexOf(move) !== -1) {
+    move = move.toLocaleLowerCase();
+  }
+  if (event.shiftKey) {
+    move += "'";
+  }
+  console.log(move);
+  if (event.code.slice(0, -1) === "Key" && rubiksCube.isTurn(move)) {
+    rubiksCube.turn(move);
+  }
+  if (event.code.slice(0, -1) === "Key" && rubiksCube.isRotation(move)) {
     rubiksCube.rotate(move);
-    console.log(rubiksCube.cube);
   }
 
   for (const element of document.getElementsByClassName("tile")) {

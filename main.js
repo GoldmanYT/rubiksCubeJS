@@ -6,7 +6,7 @@ const rubiksCube = new RubiksCube();
 
 document.addEventListener("keydown", (event) => {
   const move = event.code.at(-1);
-  if (event.code.slice(0, -1) === "Key" && "UFRDBL".indexOf(move) !== -1) {
+  if (event.code.slice(0, -1) === "Key" && Object.keys(rubiksCube.MOVES).indexOf(move) !== -1) {
     rubiksCube.rotate(move);
     console.log(rubiksCube.cube);
   }

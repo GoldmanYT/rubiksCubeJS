@@ -92,7 +92,7 @@ export class RubiksCube {
         [0, 2, 1],
         [2, 1, 0],
         [3, 2, 1],
-        [5, 2, 1],
+        [5, 1, 0],
       ],
       [
         [0, 2, 2],
@@ -130,7 +130,7 @@ export class RubiksCube {
         [0, 0, 2],
         [5, 0, 2],
         [3, 0, 0],
-        [2, 0, 2],
+        [2, 2, 2],
       ],
     ],
     R: [
@@ -214,6 +214,15 @@ export class RubiksCube {
           this.cube[t][i].push(this.COLORS[t]);
         }
       }
+    }
+  }
+
+  scramble() {
+    for (let i = 0; i < this.SIZE ** 3; i++) {
+      let count = Math.floor(Math.random() * 3) + 1;
+      let moves = Object.keys(this.MOVES);
+      let side = moves[Math.floor(Math.random() * moves.length)];
+      this.rotate(side + String(count));
     }
   }
 

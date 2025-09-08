@@ -294,6 +294,14 @@ export class RubiksCube {
     }
   }
 
+  move(move) {
+    if (this.isTurn(move)) {
+      this.turn(move);
+    } else if (this.isRotation(move)) {
+      this.rotate(move);
+    }
+  }
+
   turn(move) {
     const count = this.getCount(move);
     const indexes = this.TURNS[move.at(0)];

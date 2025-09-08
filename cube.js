@@ -320,9 +320,12 @@ export class RubiksCube {
   }
 
   rotate(move) {
+    const count = this.getCount(move);
     const turns = this.ROTATIONS[move.at(0)];
-    for (const turn of turns) {
-      this.turn(turn);
+    for (let k = 0; k < count; k++) {
+      for (const turn of turns) {
+        this.turn(turn);
+      }
     }
   }
 

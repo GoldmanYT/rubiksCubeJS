@@ -145,20 +145,20 @@ const TURN_COMPUTE = [
       {
         [T0]: "F'",
         [T180]: "F",
-        [T60]: "U",
-        [T240]: "U'",
+        [T60]: "U'",
+        [T240]: "U",
       },
       {
         [T0]: "S'",
         [T180]: "S",
-        [T60]: "U",
-        [T240]: "U'",
+        [T60]: "U'",
+        [T240]: "U",
       },
       {
         [T0]: "B",
         [T180]: "B'",
-        [T60]: "U",
-        [T240]: "U'",
+        [T60]: "U'",
+        [T240]: "U",
       },
     ],
     [
@@ -203,6 +203,14 @@ const TURN_COMPUTE = [
     ],
   ],
 ];
+const ROTATION_COMPUTE = {
+  [T0]: "",
+  [T60]: "",
+  [T120]: "",
+  [T180]: "",
+  [T240]: "",
+  [T300]: "",
+};
 let mouseData = {
   click: { x: undefined, y: undefined },
   sticker: { side: undefined, x: undefined, y: undefined },
@@ -237,15 +245,23 @@ document.addEventListener("mouseup", (event) => {
   const { side, x, y } = mouseData.sticker;
   const cubeAngle = getCubeAngle(angle);
 
-  const move = TURN_COMPUTE[side][y][x][cubeAngle];
-
-  rubiksCube.move(move);
-  updateStickers();
+  if (side) {
+    const move = TURN_COMPUTE[side][y][x][cubeAngle];
+    rubiksCube.move(move);
+    updateStickers();
+  } else {
+  }
 
   mouseData = {
     click: { x: undefined, y: undefined },
     sticker: { side: undefined, x: undefined, y: undefined },
   };
+});
+
+document.addEventListener("mousedown", (event) => {
+  if (!mouseData.side) {
+    mouseData.click = { x: event.x, y: event.y };
+  }
 });
 
 for (const element of document.getElementsByClassName("tile")) {

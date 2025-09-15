@@ -370,4 +370,18 @@ export class RubiksCube {
       Object.keys(this.ROTATIONS).includes(move.at(0))
     );
   }
+
+  isSolved() {
+    for (const side of this.cube) {
+      const color = side[0][0];
+      for (const row of side) {
+        for (const sticker of row) {
+          if (sticker !== color) {
+            return false;
+          }
+        }
+      }
+    }
+    return true;
+  }
 }

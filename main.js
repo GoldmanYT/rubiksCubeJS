@@ -4,13 +4,22 @@ import { RubiksCube } from "./cube.js";
 
 const rubiksCube = new RubiksCube();
 const [T0, T60, T120, T180, T240, T300] = [0, 60, 120, 180, 240, 300];
-const DEGREE_COMPUTE = [
+const TURN_DEGREE_COMPUTE = [
   [[-180, -120], T300],
   [[-120, -60], T0],
   [[-60, 0], T60],
   [[0, 60], T120],
   [[60, 120], T180],
   [[120, 180], T240],
+];
+const ROTATION_DEGREE_COMPUTE = [
+  [[-180, -150], T180],
+  [[-150, -90], T240],
+  [[-90, -30], T300],
+  [[-30, 30], T0],
+  [[30, 90], T60],
+  [[90, 150], T120],
+  [[150, 180], T180],
 ];
 const TURN_COMPUTE = [
   // up
@@ -204,17 +213,21 @@ const TURN_COMPUTE = [
   ],
 ];
 const ROTATION_COMPUTE = {
-  [T0]: "",
-  [T60]: "",
-  [T120]: "",
-  [T180]: "",
-  [T240]: "",
-  [T300]: "",
+  [T0]: "y'",
+  [T60]: "z",
+  [T120]: "x'",
+  [T180]: "y",
+  [T240]: "z'",
+  [T300]: "x",
 };
 let mouseData = {
   click: { x: undefined, y: undefined },
   sticker: { side: undefined, x: undefined, y: undefined },
 };
+
+window.addEventListener("blur", () => {
+  rubiksCube.scramble();
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Backspace") {
@@ -235,45 +248,88 @@ document.addEventListener("keydown", (event) => {
   updateStickers();
 });
 
-document.addEventListener("mouseup", (event) => {
-  const startCoord = mouseData.click;
-  const endCoord = { x: event.x, y: event.y };
-  const angle =
-    (Math.atan2(endCoord.y - startCoord.y, endCoord.x - startCoord.x) * 180) /
-    Math.PI;
+for (const event of ["mouseup", "touchend"]) {
+  document.addEventListener(
+    event,
+    (event) => {
+      event.preventDefault();
+      let eventX =
+        event.type === "touchend" ? event.changedTouches[0].clientX : event.x;
+      let eventY =
+        event.type === "touchend" ? event.changedTouches[0].clientY : event.y;
+      const startCoord = mouseData.click;
+      const endCoord = { x: eventX, y: eventY };
+      const angle =
+        (Math.atan2(endCoord.y - startCoord.y, endCoord.x - startCoord.x) *
+          180) /
+        Math.PI;
 
-  const { side, x, y } = mouseData.sticker;
-  const cubeAngle = getCubeAngle(angle);
+      const { side, x, y } = mouseData.sticker;
 
-  if (side) {
-    const move = TURN_COMPUTE[side][y][x][cubeAngle];
-    rubiksCube.move(move);
-    updateStickers();
-  } else {
+      if (side) {
+        const turnAngle = getTurnAngle(angle);
+        const move = TURN_COMPUTE[side][y][x][turnAngle];
+        rubiksCube.move(move);
+        updateStickers();
+      } else {
+        const rotationAngle = getRotationAngle(angle);
+        const move = ROTATION_COMPUTE[rotationAngle];
+        rubiksCube.move(move);
+        updateStickers();
+      }
+
+      mouseData = {
+        click: { x: undefined, y: undefined },
+        sticker: { side: undefined, x: undefined, y: undefined },
+      };
+    },
+    { passive: false }
+  );
+}
+
+for (const event of ["mousedown", "touchstart"]) {
+  document.addEventListener(
+    event,
+    (event) => {
+      event.preventDefault();
+      let eventX =
+        event.type === "touchstart" ? event.changedTouches[0].clientX : event.x;
+      let eventY =
+        event.type === "touchstart" ? event.changedTouches[0].clientY : event.y;
+      if (!mouseData.side) {
+        mouseData.click = { x: eventX, y: eventY };
+      }
+    },
+    { passive: false }
+  );
+
+  for (const element of document.getElementsByClassName("tile")) {
+    const side = element.getAttribute("side");
+    const x = element.getAttribute("x");
+    const y = element.getAttribute("y");
+    if (side < 3) {
+      element.addEventListener(
+        event,
+        (event) => {
+          let eventX =
+            event.type === "touchstart"
+              ? event.changedTouches[0].clientX
+              : event.x;
+          let eventY =
+            event.type === "touchstart"
+              ? event.changedTouches[0].clientY
+              : event.y;
+          event.preventDefault();
+
+          mouseData = {
+            click: { x: eventX, y: eventY },
+            sticker: { side, x, y },
+          };
+        },
+        { passive: false }
+      );
+    }
   }
-
-  mouseData = {
-    click: { x: undefined, y: undefined },
-    sticker: { side: undefined, x: undefined, y: undefined },
-  };
-});
-
-document.addEventListener("mousedown", (event) => {
-  if (!mouseData.side) {
-    mouseData.click = { x: event.x, y: event.y };
-  }
-});
-
-for (const element of document.getElementsByClassName("tile")) {
-  const side = element.getAttribute("side");
-  const x = element.getAttribute("x");
-  const y = element.getAttribute("y");
-  element.addEventListener("mousedown", (event) => {
-    mouseData = {
-      click: { x: event.x, y: event.y },
-      sticker: { side, x, y },
-    };
-  });
 }
 
 function updateStickers() {
@@ -284,10 +340,28 @@ function updateStickers() {
     const color = rubiksCube.getColor(side, x, y);
     element.setAttribute("fill", color);
   }
+  for (const element of document.getElementsByClassName("message")) {
+    element.remove();
+  }
+  if (rubiksCube.isSolved()) {
+    const winMessage = document.createElement("div");
+    winMessage.setAttribute("class", "message");
+    winMessage.appendChild(document.createTextNode("Кубик Рубика собран!"));
+    const mainDiv = document.getElementById("main");
+    mainDiv.insertAdjacentElement("afterend", winMessage);
+  }
 }
 
-function getCubeAngle(angle) {
-  for (const [[a1, a2], res] of DEGREE_COMPUTE) {
+function getTurnAngle(angle) {
+  for (const [[a1, a2], res] of TURN_DEGREE_COMPUTE) {
+    if (a1 <= angle && angle <= a2) {
+      return res;
+    }
+  }
+}
+
+function getRotationAngle(angle) {
+  for (const [[a1, a2], res] of ROTATION_DEGREE_COMPUTE) {
     if (a1 <= angle && angle <= a2) {
       return res;
     }

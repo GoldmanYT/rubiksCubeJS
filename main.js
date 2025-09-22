@@ -225,8 +225,9 @@ let mouseData = {
   sticker: { side: undefined, x: undefined, y: undefined },
 };
 
-window.addEventListener("blur", () => {
+window.addEventListener("resize", () => {
   rubiksCube.scramble();
+  updateStickers();
 });
 
 document.addEventListener("keydown", (event) => {
@@ -259,6 +260,12 @@ for (const event of ["mouseup", "touchend"]) {
         event.type === "touchend" ? event.changedTouches[0].clientY : event.y;
       const startCoord = mouseData.click;
       const endCoord = { x: eventX, y: eventY };
+      const dist =
+        ((endCoord.x - startCoord.x) ** 2 + (endCoord.y - startCoord.y) ** 2) **
+        0.5;
+      if (dist <= 10) {
+        return;
+      }
       const angle =
         (Math.atan2(endCoord.y - startCoord.y, endCoord.x - startCoord.x) *
           180) /

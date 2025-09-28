@@ -1,4 +1,6 @@
 div {
   display: flex;
   justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: xx-large;
 }
